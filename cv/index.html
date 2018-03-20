@@ -1,0 +1,953 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+    <title>Marie-Pierre Cardinal-Labrie</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            background: #D2D4D3;
+            font: 15px Arial, Helvetica, sans-serif;
+            line-height: 1.4;
+            color: #929292;
+        }
+
+        .container {
+            margin: 0 auto;
+            padding: 10%;
+        }
+
+        #resume {
+            border-radius: 5px;
+            border: 1px solid #C7C7C7;
+            overflow: hidden;
+        }
+
+        section {
+            margin-bottom: 5rem;
+        }
+
+        [class^="section-"] > .title {
+            text-transform: uppercase;
+            padding: 15px 0;
+            margin: 0;
+        }
+
+        [class^="section-"] > .title .title-icon,
+        [class^="section-"] > .title span {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        [class^="section-"] > .title span {
+            margin-left: 2px;
+        }
+
+        [class^="section-"] > .title .title-icon {
+            background-color: whitesmoke;
+            border-radius: 50%;
+            width: 2rem;
+            height: 2rem;
+            padding: 0.4rem 0.45rem;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            padding: 2rem;
+            background: #E6EAED !important;
+            margin-bottom: -99999px;
+            padding-bottom: 99999px;
+        }
+
+        .sidebar, .sidebar h1 {
+            color: #656567 !important;
+        }
+
+
+        .sidebar h2 {
+            color: #ffffff;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 1.5rem;
+            letter-spacing: 0.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem !important;
+            background: #646466;
+            padding: 0.5rem 0.5rem 0.5rem 0.5rem !important;
+        }
+
+        .avatar {
+            margin: 5rem 0;
+            text-align: center;
+        }
+
+        .avatar img {
+            width: 90%;
+        }
+
+        .section-education .item {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .section-education .studyTitle {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+        .section-education .courses {
+            font-size: 1.2rem;
+        }
+        .section-education ul.courses {
+            list-style-type: none;
+            margin: 0.5rem 0 0.5rem 0;
+            padding: 0;
+        }
+
+        .section-education .ul.courses li {
+            margin:0;
+        }
+
+        .section-education .institution {
+            font-size: 1.2rem;
+        }
+
+        .section-education .date {
+            font-size: 1.2rem;
+        }
+
+        .sidebar a:link, .sidebar a:hover, .sidebar a:visited {
+            text-decoration: none;
+            color: #ffffff !important;
+        }
+
+        /* Content */
+        .content {
+            padding: 0 5rem 0 5rem;
+            padding-bottom: 0px;
+            background: #FFFFFF;
+            margin-bottom: -99999px;
+            padding-bottom: 99999px;
+        }
+
+        .content h1 {
+            color: #3C3C3C;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 4rem;
+            letter-spacing: 1.0rem;
+            font-weight: bold;
+        }
+
+        .content h2 {
+            color: #646466;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 1.5rem;
+            letter-spacing: 0.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem !important;
+            background: #E6EAED;
+            padding: 0.5rem 0.5rem 0.5rem 0.5rem !important;
+        }
+
+        .content a:link, .content a:hover, .content a:visited {
+            text-decoration: none;
+            color: #6D6D6D;
+        }
+
+        /* Sections */
+        .section-name {
+            margin: 0rem 0 5rem 0;
+            background: #E6EAED;
+            padding: 6rem 0 4rem 0;
+        }
+
+        .section-name h2 {
+            color: #6D6D6D;
+            text-transform: unset;
+            text-align: center;
+            font-size: 1.5rem;
+            letter-spacing: 0.5rem;
+            font-weight: bold;
+            margin-top: 5rem;
+            background: none;
+        }
+
+        .section-summary {
+            text-align: justify;
+        }
+
+        .section-work .item {
+            margin-bottom: 2.5rem;
+        }
+
+        .section-work .item .position {
+            font-weight: bold;
+            color: #252324;
+            text-transform: uppercase;
+        }
+
+        .section-work .item .company {
+            padding: 0.5rem 0 0.5rem 0;
+            color: #605E5F;
+            font-weight: bold;
+        }
+
+        .section-work .item .summary, .section-work .item .highlights {
+            font-style: italic;
+            text-align: justify;
+        }
+
+        .section-volunteer .item {
+            margin-bottom: 2.5rem;
+        }
+
+        .section-volunteer .item .position {
+            font-weight: bold;
+            color: #252324;
+            text-transform: uppercase;
+        }
+
+        .section-volunteer .item .company {
+            padding: 0.5rem 0 0.5rem 0;
+            color: #6D6D6D;
+            font-weight: bold;
+        }
+
+        .section-volunteer .item .summary, .section-volunteer .item .highlights {
+            font-style: italic;
+            text-align: justify;
+        }
+
+
+        .section-publications .item {
+            margin-bottom: 2.5rem;
+        }
+
+        .section-publications .item .name {
+            font-weight: bold;
+            color: #252324;
+            text-transform: uppercase;
+        }
+
+        .section-publications .item .publication {
+            padding: 0.5rem 0 0.5rem 0;
+            color: #6D6D6D;
+            font-weight: bold;
+        }
+
+        .section-publications .item .summary, .section-publications .item .highlights {
+            font-style: italic;
+            text-align: justify;
+        }
+
+
+        .section-awards .item .title {
+            font-weight: bold;
+            color: #252324;
+        }
+
+        .section-awards .item .date, .section-awards .item .awarder {
+            font-weight: normal;
+            color: #929292;
+        }
+
+        .section-awards .item .summary {
+            font-weight: normal;
+            font-style: italic;
+            text-align: justify;
+        }
+
+        .section-languages .item .language {
+            font-weight: bold;
+            color: #252324;
+        }
+
+        .section-languages .item .fluency {
+            font-weight: normal;
+            color: #929292;
+        }
+
+        .section-interests .title {
+            font-weight: bold;
+        }
+
+        .section-interests .item {
+            margin: 0.8rem 0 0.8rem 0;
+            line-height: 1.9rem;
+        }
+
+        .section-skills .item {
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+
+        .section-contact .fa {
+            padding: 0.8rem 0 0 0;
+            color: #646466;
+            text-align: center;
+            display: block;
+            margin: 0 auto 0.8rem auto;
+        }
+
+
+        .section-contact ul.contact {
+            list-style-type: none;
+            margin: 0.5rem 0 0.5rem 0;
+            padding: 0;
+        }
+
+        .section-contact ul.contact li {
+            margin: 1rem 0 1rem 0;
+            text-align: center;
+        }
+
+        .section-contact ul.profiles {
+            list-style-type: none;
+            margin: 4rem 0 0.5rem 0;
+            padding: 0;
+        }
+
+        .section-contact ul.profiles li {
+            margin: 1rem 0 1rem 0;
+        }
+
+        .section-contact ul li span {
+            text-align: center;
+            display: inherit;
+        }
+
+        /* Print */
+        @media print {
+            *, :after, :before{
+                color: #646466 !important;
+            }
+            body {
+                font: 10px Arial, Helvetica, sans-serif;
+                line-height: 1.4;
+                color: #929292 !important;
+            }
+            .section-work {
+                page-break-after: always;
+            }
+
+            .container {
+                margin: 0 auto;
+                padding: 0;
+            }
+
+            #resume {
+                overflow: hidden;
+                border: none !important;
+            }
+
+            section {
+                margin-bottom: 5rem;
+            }
+
+            [class^="section-"] > .title {
+                text-transform: uppercase;
+                padding: 15px 0;
+                margin: 0;
+            }
+
+            [class^="section-"] > .title .title-icon,
+            [class^="section-"] > .title span {
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            [class^="section-"] > .title span {
+                margin-left: 2px;
+            }
+
+            [class^="section-"] > .title .title-icon {
+                background-color: whitesmoke;
+                border-radius: 50%;
+                width: 2rem;
+                height: 2rem;
+                padding: 0.4rem 0.45rem;
+            }
+
+            /* Sidebar */
+            .sidebar {
+                padding: 2rem 2rem 2rem 3rem;
+                background: #E6EAED !important;
+                margin-bottom: -99999px;
+                padding-bottom: 99999px;
+            }
+
+            .sidebar, .sidebar h1 {
+                color: #656567 !important;
+            }
+
+
+            .sidebar h2 {
+                color: #ffffff !important;
+                text-transform: uppercase;
+                text-align: center;
+                font-size: 1.5rem;
+                letter-spacing: 0.5rem;
+                font-weight: bold;
+                margin-bottom: 1rem !important;
+                background: #646466 !important;
+                padding: 0.5rem 0.5rem 0.5rem 0.5rem !important;
+            }
+
+            .sidebar h2 span{
+                color: #ffffff !important;
+            }
+
+            .avatar {
+                margin: 5rem 0;
+                text-align: center;
+            }
+
+            .avatar img {
+                width: 90%;
+            }
+
+            .section-education .item {
+                margin-bottom: 3rem;
+                text-align: center;
+            }
+
+            .section-education .studyTitle {
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 1.3rem;
+            }
+            .section-education .courses {
+                font-size: 1.2rem;
+            }
+            .section-education ul.courses {
+                list-style-type: none;
+                margin: 0.5rem 0 0.5rem 0;
+                padding: 0;
+            }
+
+            .section-education .ul.courses li {
+                margin:0;
+            }
+
+            .section-education .institution {
+                font-size: 1.2rem;
+            }
+
+            .section-education .date {
+                font-size: 1.2rem;
+            }
+
+            .sidebar a:link, .sidebar a:hover, .sidebar a:visited {
+                text-decoration: none;
+                color: #ffffff !important;
+            }
+
+            .sidebar .section-skills .keywords span.label{
+                display: inline-block !important;
+                margin-bottom: 0.3rem !important;
+            }
+
+            /* Content */
+            .content {
+                padding: 0 3rem 0 2rem;
+                padding-bottom: 0px;
+                background: #FFFFFF;
+                margin-bottom: -99999px;
+                padding-bottom: 99999px;
+            }
+
+            .content h1 {
+                color: #3C3C3C;
+                text-transform: uppercase;
+                text-align: center;
+                font-size: 4rem;
+                letter-spacing: 1.0rem;
+                font-weight: bold;
+            }
+
+            .content h2 {
+                color: #646466 !important;
+                text-transform: uppercase;
+                text-align: center;
+                font-size: 1.5rem !important;
+                letter-spacing: 0.5rem;
+                font-weight: bold;
+                margin-bottom: 1rem !important;
+                background: #E6EAED !important;
+                padding: 0.5rem 0.5rem 0.5rem 0.5rem !important;
+            }
+
+            .content a:link, .content a:hover, .content a:visited {
+                text-decoration: none;
+                color: #6D6D6D;
+            }
+
+            /* Sections */
+            .section-name {
+                margin: 0rem 0 5rem 0 !important;
+                background: #E6EAED !important;
+                padding: 6rem 0 4rem 0 !important;
+            }
+
+            .section-name h1 {
+                font-size: 2.8rem !important;
+                font-weight: bold !important;
+            }
+
+            .section-name h2 {
+                color: #6D6D6D !important;
+                text-transform: capitalize;
+                text-align: center;
+                font-size: 1.5rem !important;
+                letter-spacing: 0.5rem;
+                font-weight: bold;
+                margin-top: 5rem;
+                background: none;
+            }
+
+            .section-summary {
+                text-align: justify;
+            }
+
+            .section-work .item {
+                margin-bottom: 2.5rem;
+            }
+
+            .section-work .item .position {
+                font-weight: bold;
+                color: #252324;
+                text-transform: uppercase;
+            }
+
+            .section-work .item .company {
+                padding: 0.5rem 0 0.5rem 0;
+                color: #605E5F;
+                font-weight: bold;
+            }
+
+            .section-work .item .summary, .section-work .item .highlights {
+                font-style: italic;
+                text-align: justify;
+            }
+
+            .section-volunteer .item {
+                margin-bottom: 2.5rem;
+            }
+
+            .section-volunteer .item .position {
+                font-weight: bold;
+                color: #252324;
+                text-transform: uppercase;
+            }
+
+            .section-volunteer .item .company {
+                padding: 0.5rem 0 0.5rem 0;
+                color: #6D6D6D;
+                font-weight: bold;
+            }
+
+            .section-volunteer .item .summary, .section-volunteer .item .highlights {
+                font-style: italic;
+                text-align: justify;
+            }
+
+
+            .section-publications .item {
+                margin-bottom: 2.5rem;
+            }
+
+            .section-publications .item .name {
+                font-weight: bold;
+                color: #252324;
+                text-transform: uppercase;
+            }
+
+            .section-publications .item .publication {
+                padding: 0.5rem 0 0.5rem 0;
+                color: #6D6D6D;
+                font-weight: bold;
+            }
+
+            .section-publications .item .summary, .section-publications .item .highlights {
+                font-style: italic;
+                text-align: justify;
+            }
+
+
+            .section-awards .item .title {
+                font-weight: bold;
+                color: #252324;
+            }
+
+            .section-awards .item .date, .section-awards .item .awarder {
+                font-weight: normal;
+                color: #929292;
+            }
+
+            .section-awards .item .summary {
+                font-weight: normal;
+                font-style: italic;
+                text-align: justify;
+            }
+
+            .section-languages .item .language {
+                font-weight: bold;
+                color: #252324;
+            }
+
+            .section-languages .item .fluency {
+                font-weight: normal;
+                color: #929292;
+            }
+
+            .section-interests .title {
+                font-weight: bold;
+            }
+
+            .section-interests .item {
+                margin: 0.8rem 0 0.8rem 0;
+                line-height: 1.9rem;
+            }
+
+            .section-skills .item {
+                margin-bottom: 1rem;
+                text-align: center;
+            }
+
+
+            .section-contact .fa {
+                padding: 0.8rem 0 0 0;
+                color: #646466 !important;
+                text-align: center;
+                display: block;
+                margin: 0 auto 0.8rem auto;
+            }
+
+
+            .section-contact ul.contact {
+                list-style-type: none;
+                margin: 0.5rem 0 0.5rem 0;
+                padding: 0;
+            }
+
+            .section-contact ul.contact li {
+                margin: 1rem 0 1rem 0;
+                text-align: center;
+            }
+
+            .section-contact ul.profiles {
+                list-style-type: none;
+                margin: 4rem 0 0.5rem 0;
+                padding: 0;
+            }
+
+            .section-contact ul.profiles li {
+                margin: 1rem 0 1rem 0;
+            }
+
+            .section-contact ul li span {
+                text-align: center;
+                display: inherit;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row" id="resume">
+        <div class="col-xs-4 sidebar">
+            <section class="section-basic">
+            </section>
+            <section class="section-contact">
+                <h2 class="title">
+                    <span class="">Contacts</span>
+                </h2>
+                <ul class="contact">
+                    <li class="icon-item clearfix">
+                        <i class="fa fa-2x fa-map-marker"></i>
+                        3164 rue de Namur, app. 6
+
+                        Québec, Qc,
+                        G1W 2V2
+                    </li>
+                    <li class="icon-item clearfix">
+                        <i class="fa fa-2x fa-envelope "></i>
+                        <p class="__cf_email__">mcardinallabrie@hotmail.fr</p>
+                    </li>
+                    <li class="icon-item clearfix">
+                        <i class="fa fa-2x fa-phone "></i>
+                        (418) 570-2567
+                    </li>
+                </ul>
+            </section>
+            <section class="section-education">
+                <h2 class="title">
+                    <span class="">Études</span>
+                </h2>
+                <div class="item">
+                    <div class="studyTitle">
+<span class="studyType">
+DEC
+</span>
+                        <span class="area">
+Intégration multimédia - web et apps
+</span>
+                    </div>
+                    <div class="institution">
+                        Cégep de Sainte-Foy
+                    </div>
+                    <div class="date">
+<span class="startDate">
+2017
+</span>
+                        <span class="endDate">
+- En cours
+</span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="studyTitle">
+<span class="studyType">
+DEC
+</span>
+                        <span class="area">
+Arts et lettres - Littérature
+</span>
+                    </div>
+                    <div class="institution">
+                        Cégep Garneau
+                    </div>
+                    <div class="date">
+<span class="startDate">
+2011
+</span>
+                        <span class="endDate">
+- 2013
+</span>
+                    </div>
+                </div>
+            </section>
+            <section class="section-skills">
+                <h2 class="title">
+                    <span class="">Compétences</span>
+                </h2>
+                <div class="item">
+                    <div class="name">
+                        Intégration web
+                    </div>
+                    <div class="keywords">
+                        <span class="label label-default">HTML</span>
+                        <span class="label label-default">CSS</span>
+                        <span class="label label-default">Javascript</span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="name">
+                        Design d&#x27;interfaces
+                    </div>
+                    <div class="keywords">
+                        <span class="label label-default">Photoshop</span>
+                        <span class="label label-default">Sketch</span>
+                        <span class="label label-default">Illustrator</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-xs-8 content">
+            <section class="section-name">
+                <h1>Marie-Pierre Cardinal-Labrie</h1>
+                <h2>Intégratrice web</h2>
+            </section>
+            <section class="section-summary">
+                <h2 class="title">
+                    <span class="">Résumé</span>
+                </h2>
+                Toujours à fond dans tout ce que j’entreprends, je suis quelqu’un de passionnée et de touche-à-tout. J’adore découvrir de nouvelles choses, de nouvelles méthodes de travail. Je sais être sérieuse et efficace dans mon travail tout en restant enjouée et vive d’esprit. Une chose est sûre, je risque de vous surprendre par mon assiduité!
+            </section>
+            <section class="section-work">
+                <h2 class="title">
+                    <span class="">Expériences de travail</span>
+                </h2>
+                <div class="item">
+                    <div class="position">
+                        Caissière
+                    </div>
+                    <div class="company">
+<span class="name">
+Pharmacie Proxim Jean-Claude Robidoux
+</span>
+                        <span class="date">
+|
+<span class="startDate">
+Jan 2018
+</span>
+<span class="endDate">
+- Actuel
+</span>
+</span>
+                    </div>
+                    <ul class="highlights">
+                        <li>Assurer les ventes de produits pharmaceutiques</li>
+                        <li>Aider à l&#x27;entretien et à la mise en marché</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <div class="position">
+                        Caissière
+                    </div>
+                    <div class="company">
+<span class="name">
+Jardin Mobile la Pérade
+</span>
+                        <span class="date">
+|
+<span class="startDate">
+Jan 2016
+</span>
+<span class="endDate">
+- Jan 2017
+</span>
+<span class="diffDate">
+</span>
+</span>
+                    </div>
+                    <ul class="highlights">
+                        <li>Gérer le comptoir-caisse</li>
+                        <li>Aider à la préparation et à l’emballage de fruits et légumes</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <div class="position">
+                        Caissière
+                    </div>
+                    <div class="company">
+<span class="name">
+Canadian-tire Vanier
+</span>
+                        <span class="date">
+|
+<span class="startDate">
+Jan 2016
+</span>
+<span class="endDate">
+- Jan 2017
+</span>
+<span class="diffDate">
+</span>
+</span>
+                    </div>
+                    <ul class="highlights">
+                        <li>Gérer le comptoir-caisse</li>
+                        <li>S&#x27;occuper du centre-jardin</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <div class="position">
+                        responsable du club de lecture Croc-livres
+                    </div>
+                    <div class="company">
+<span class="name">
+Bibliothèque de charlesbourg
+</span>
+                        <span class="date">
+|
+<span class="startDate">
+Jan 2011
+</span>
+<span class="endDate">
+- Jan 2012
+</span>
+<span class="diffDate">
+</span>
+</span>
+                    </div>
+                    <ul class="highlights">
+                        <li>Animer des enfants de 3 à 12 ans en les encourageant à la lecture</li>
+                        <li>Aider à maintenir l&#x27;ordre dans la bibliothèque</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <div class="company">
+<span class="date">
+<span class="startDate">
+Jan 2009
+</span>
+<span class="endDate">
+- Jan 2010
+</span>
+<span class="diffDate">
+</span>
+</span>
+                    </div>
+                    <ul class="highlights">
+                        <li>Aider à la transcription de verbatims pour une thèse universitaire portant sur l&#x27;expression orale chez les enfants de 0 à 3 ans</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="section-languages">
+                <h2 class="title">
+                    <span class="">Langues</span>
+                </h2>
+                <ul>
+                    <li class="item">
+                        <div class="language">
+                            Français
+                            <span class="fluency">
+| <em>Bonne maîtrise parlé et écrit</em>
+</span>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="language">
+                            Anglais
+                            <span class="fluency">
+| <em>Intermédiaire</em>
+</span>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section class="section-interests">
+                <h2 class="title">
+                    <span class="">Intérêts</span>
+                </h2>
+                <ul>
+                    <li class="item">
+                        <div class="name">
+                            Musique
+                        </div>
+                        <div class="keywords">
+                            <span class="label label-default">Piano</span>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="name">
+                            Plein-air
+                        </div>
+                        <div class="keywords">
+                            <span class="label label-default">Camping</span>
+                            <span class="label label-default">Marche</span>
+                        </div>
+                    </li>
+                    <ul>
+            </section>
+            <section class="section-references">
+                <h2 class="title">
+                    <span class="">Références</span>
+                </h2>
+                <div class="item">
+                    <div class="name">
+                        — Fournies sur demande
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/d07b1474/cloudflare-static/email-decode.min.js"></script></body>
+</html>

@@ -1,0 +1,154 @@
+{
+  "basics": {
+    "name": "Marie-Pierre Cardinal-Labrie",
+    "label": "Intégratrice web",
+    "picture": "",
+    "email": "mcardinallabrie@hotmail.fr",
+    "phone": "(418) 570-2567",
+    "website": "",
+    "summary": "Toujours à fond dans tout ce que j’entreprends, je suis quelqu’un de passionnée et de touche-à-tout. J’adore découvrir de nouvelles choses, de nouvelles méthodes de travail. Je sais être sérieuse et efficace dans mon travail tout en restant enjouée et vive d’esprit. Une chose est sûre, je risque de vous surprendre par mon assiduité!",
+    "location": {
+      "address": "3164 rue de Namur, app. 6",
+      "postalCode": "G1W 2V2",
+      "city": "Québec",
+      "countryCode": "Canada",
+      "region": "Québec"
+    },
+    "profiles": []
+  },
+  "work": [
+    {
+      "company": "Pharmacie Proxim Jean-Claude Robidoux",
+      "position": "Caissière",
+      "website": "",
+      "startDate": "2018",
+      "endDate": "",
+      "summary": "",
+      "highlights": [
+        "Assurer les ventes de produits pharmaceutiques",
+        "Aider à l'entretien et à la mise en marché"
+      ]
+    },
+    {
+      "company": "Jardin Mobile la Pérade",
+      "position": "Caissière",
+      "website": "",
+      "startDate": "2016",
+      "endDate": "2017",
+      "summary": "",
+      "highlights": [
+        "Gérer le comptoir-caisse",
+        "Aider à la préparation et à l’emballage de fruits et légumes"
+      ]
+    },
+    {
+      "company": "Canadian-tire Vanier",
+      "position": "Caissière",
+      "website": "",
+      "startDate": "2016",
+      "endDate": "2017",
+      "summary": "",
+      "highlights": [
+        "Gérer le comptoir-caisse",
+        "S'occuper du centre-jardin"
+      ]
+    },
+    {
+      "company": "Bibliothèque de charlesbourg",
+      "position": "responsable du club de lecture Crock-livres",
+      "website": "",
+      "startDate": "2011",
+      "endDate": "2012",
+      "summary": "",
+      "highlights": [
+        "Animer des enfants de 3 à 12 ans en les encourageant à la lecture",
+        "Aider à maintenir l'ordre dans la bibliothèque"
+      ]
+    },
+    {
+      "company": "",
+      "position": "",
+      "website": "",
+      "startDate": "2009",
+      "endDate": "2010",
+      "summary": "",
+      "highlights": [
+        "Aider à la transcription de verbatims pour une thèse universitaire portant sur l'expression orale chez les enfants de 0 à 3 ans"
+      ]
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "Cégep de Sainte-Foy",
+      "area": "Intégration multimédia - web et apps",
+      "studyType": "DEC",
+      "startDate": "2017",
+      "endDate": "",
+      "gpa": "",
+      "courses": []
+    },
+    {
+      "institution": "Cégep Garneau",
+      "area": "Arts et lettres - Littérature",
+      "studyType": "DEC",
+      "startDate": "2011",
+      "endDate": "2013",
+      "gpa": "",
+      "courses": []
+    }
+  ],
+  "awards": [],
+  "publications": [],
+  "skills": [
+    {
+      "name": "Intégration web",
+      "level": "",
+      "keywords": [
+        "HTML",
+        "CSS",
+        "Javascript"
+      ]
+    },
+    {
+      "name": "Design d'interfaces",
+      "level": "",
+      "keywords": [
+        "Photoshop",
+        "Sketch",
+        "Illustrator"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Français",
+      "fluency": "Bonne maîtrise parlé et écrit"
+    },
+    {
+      "language": "Anglais",
+      "fluency": "Intermédiaire"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Musique",
+      "keywords": [
+        "Piano"
+      ]
+    },
+    {
+      "name": "Plein-air",
+      "keywords": [
+        "Camping",
+        "Marche"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "Fournies sur demande",
+      "reference": ""
+    }
+  ]
+}
